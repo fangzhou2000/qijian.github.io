@@ -242,7 +242,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-10-14 21:15:56 / Modified: 13:19:47" itemprop="dateCreated datePublished" datetime="2022-10-14T21:15:56Z">2022-10-14</time>
+              <time title="Created: 2022-10-14 21:15:56 / Modified: 14:09:22" itemprop="dateCreated datePublished" datetime="2022-10-14T21:15:56Z">2022-10-14</time>
             </span>
 
           
@@ -274,12 +274,12 @@
 <p>样本输出值：$y$</p>
 <p>假设函数：$h_\theta(x)=\theta_0+\theta_1x$ </p>
 <p>参数：$\theta$ （列向量）</p>
-<p>代价函数：$J(\theta)=\frac{1}{2m}\sum\limits<em>{i=1}^{m}(h</em>\theta(x^{(i)}-y^(i))^2$</p>
+<p>代价函数：$J(\theta)=\frac{1}{2m}\sum\limits_{i=1}^{m}(h_\theta(x^{(i)}-y^(i))^2$</p>
 <p>目标：$min_{\theta} J(\theta)$</p>
 <p>梯度下降算法</p>
 <ul>
 <li>$\theta_j := \theta_j - \alpha\frac{\partial{}}{\partial{\theta_j}}J(\theta_0, \theta_1)$ for j = 0 to 1 同步更新</li>
-<li>$\theta<em>j := \theta_j - \alpha \frac{1}{m} \sum \limits</em>{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$</li>
+<li>$\theta_j := \theta_j - \alpha \frac{1}{m} \sum \limits_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}$</li>
 <li>$\alpha$：学习率</li>
 </ul>
 <p>多特征的回归模型</p>
@@ -299,7 +299,7 @@
 <p>样本个数：$m$</p>
 <p>特征个数：n</p>
 <p>样本输入值：$x$</p>
-<p>样本输出值：$y \in {0, 1}$</p>
+<p>样本输出值：$y \in \{0, 1\}$</p>
 <p>假设函数</p>
 <ul>
 <li><p>$h_\theta(x)=g(\theta^Tx) = \frac{1}{1+e^{-\theta^Tx}}$</p>
@@ -311,11 +311,11 @@
 <p>代价函数</p>
 <ul>
 <li>线性回归的代价函数对于逻辑回归非凸</li>
-<li>$J(\theta)=\frac{1}{m}\sum\limits<em>{i=1}^{m}Cost(h</em>\theta(x^{(i)}), y^{i})$</li>
-<li>$Cost(h<em>\theta(x^{(i)}), y^{i})=-log(h</em>\theta(x))$  if y=1</li>
-<li><p>$Cost(h<em>\theta(x^{(i)}), y^{i})=-log(1-h</em>\theta(x))$  if y=0</p>
+<li>$J(\theta)=\frac{1}{m}\sum\limits_{i=1}^{m}Cost(h_\theta(x^{(i)}), y^{i})$</li>
+<li>$Cost(h_\theta(x^{(i)}), y^{i})=-log(h_\theta(x))$  if y=1</li>
+<li><p>$Cost(h_\theta(x^{(i)}), y^{i})=-log(1-h_\theta(x))$  if y=0</p>
 </li>
-<li><p>$J(\theta) = -[\frac{1}{m}\sum\limits<em>{i=1}^{m}y^{(i)}\log h</em>{\theta}(x^{(i)})+(1-y^{(i)})\log (1-h_\theta(x^{(i)})]$</p>
+<li><p>$J(\theta) = -[\frac{1}{m}\sum\limits_{i=1}^{m}y^{(i)}\log h_{\theta}(x^{(i)})+(1-y^{(i)})\log (1-h_\theta(x^{(i)})]$</p>
 </li>
 </ul>
 <p>目标：$min_{\theta} J(\theta)$</p>
@@ -325,7 +325,7 @@
 </ul>
 <p>多分类的逻辑回归</p>
 <ul>
-<li>$max<em>ih</em>\theta^{(i)}(x)$</li>
+<li>$max_ih_\theta^{(i)}(x)$</li>
 </ul>
 <h4 id="非线性假设函数"><a href="#非线性假设函数" class="headerlink" title="非线性假设函数"></a>非线性假设函数</h4><ul>
 <li>$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\theta_3x_1x_2+…$</li>
@@ -339,25 +339,25 @@
 <ul>
 <li><p>线性回归</p>
 <ul>
-<li>代价函数：$J(\theta) = \frac{1}{2m}[\sum\limits<em>{i=1}^{m}(h</em>{\theta}(x^{(i)})-y^{(i)})^2+\lambda\sum\limits_{i=1}^m\theta_j^2]$</li>
-<li>梯度下降：$\theta<em>j := \theta_j - \alpha [\frac{1}{m} \sum \limits</em>{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} + \frac{\lambda}{m}\theta_j]$</li>
+<li>代价函数：$J(\theta) = \frac{1}{2m}[\sum\limits_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^2+\lambda\sum\limits_{i=1}^m\theta_j^2]$</li>
+<li>梯度下降：$\theta_j := \theta_j - \alpha [\frac{1}{m} \sum \limits_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} + \frac{\lambda}{m}\theta_j]$</li>
 <li>正规方程：$\theta = (X^TX+\lambda A)^{-1}X^Ty$，A是左上角为0的单位阵</li>
 </ul>
 </li>
 <li><p>逻辑回归</p>
 <ul>
-<li>代价函数：$J(\theta) = -[\frac{1}{m}\sum\limits<em>{i=1}^{m}y^{(i)}\log h</em>{\theta}(x^{(i)})+(1-y^{(i)})\log (1-h<em>\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum\limits</em>{j=1}^{n}\theta_j^2$</li>
-<li>梯度下降：$\theta<em>j := \theta_j - \alpha [\frac{1}{m} \sum \limits</em>{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} + \frac{\lambda}{m}\theta_j]$</li>
+<li>代价函数：$J(\theta) = -[\frac{1}{m}\sum\limits_{i=1}^{m}y^{(i)}\log h_{\theta}(x^{(i)})+(1-y^{(i)})\log (1-h_\theta(x^{(i)}))] + \frac{\lambda}{2m}\sum\limits_{j=1}^{n}\theta_j^2$</li>
+<li>梯度下降：$\theta_j := \theta_j - \alpha [\frac{1}{m} \sum \limits_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} + \frac{\lambda}{m}\theta_j]$</li>
 </ul>
 </li>
 </ul>
 <h4 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h4><p>简单的三层神经网络</p>
 <p>前向传播</p>
 <p>$a^{(l)}_{j}$ 第l层的第j个激活值</p>
-<p>$a<em>1^{(2)}=g(\Theta</em>{10}^{(1)}x<em>0+\Theta</em>{11}^{(1)}x<em>1+\Theta</em>{12}^{(1)}x<em>2+\Theta</em>{13}^{(1)}x_3)$</p>
-<p>$a<em>2^{(2)}=g(\Theta</em>{20}^{(1)}x<em>0+\Theta</em>{21}^{(1)}x<em>1+\Theta</em>{22}^{(1)}x<em>2+\Theta</em>{23}^{(1)}x_3)$</p>
-<p>$a<em>3^{(2)}=g(\Theta</em>{30}^{(1)}x<em>0+\Theta</em>{31}^{(1)}x<em>1+\Theta</em>{32}^{(1)}x<em>2+\Theta</em>{33}^{(1)}x_3)$</p>
-<p>$h<em>\theta(x)=a_1^{(3)}=g(\Theta</em>{10}^{(2)}a<em>0^{(2)}+\Theta</em>{11}^{(2)}a<em>1^{(2)}+\Theta</em>{12}^{(1)}a<em>2^{(2)}+\Theta</em>{13}^{(1)}a_3^{(2)})$</p>
+<p>$a_1^{(2)}=g(\Theta_{10}^{(1)}x_0+\Theta_{11}^{(1)}x_1+\Theta_{12}^{(1)}x_2+\Theta_{13}^{(1)}x_3)$</p>
+<p>$a_2^{(2)}=g(\Theta_{20}^{(1)}x_0+\Theta_{21}^{(1)}x_1+\Theta_{22}^{(1)}x_2+\Theta_{23}^{(1)}x_3)$</p>
+<p>$a_3^{(2)}=g(\Theta_{30}^{(1)}x_0+\Theta_{31}^{(1)}x_1+\Theta_{32}^{(1)}x_2+\Theta_{33}^{(1)}x_3)$</p>
+<p>$h_\theta(x)=a_1^{(3)}=g(\Theta_{10}^{(2)}a_0^{(2)}+\Theta_{11}^{(2)}a_1^{(2)}+\Theta_{12}^{(1)}a_2^{(2)}+\Theta_{13}^{(1)}a_3^{(2)})$</p>
 <p>向量表示</p>
 <p>$a^{(1)}=x$</p>
 <p>$z^{(2)}=\Theta^{(1)}a^{(1)}$</p>
@@ -373,16 +373,16 @@
 <p>代价函数</p>
 <ul>
 <li>L层，K个类别，m个样本</li>
-<li>$J(\theta) = -[\frac{1}{m}\sum\limits<em>{i=1}^{m}\sum\limits</em>{k=1}^{K}y<em>{k}^{(i)}\log h</em>{\theta}(x^{(i)})<em>{k}+(1-y</em>{k}^{(i)})\log (1-h<em>\theta(x^{(i)})_k)] + \frac{\lambda}{2m}\sum\limits</em>{l=1}^{L-1}\sum\limits<em>{i=1}^{s_l}\sum\limits</em>{j=1}^{s<em>l+1}(\theta</em>{ji}^{(l)})^2$</li>
+<li>$J(\theta) = -[\frac{1}{m}\sum\limits_{i=1}^{m}\sum\limits_{k=1}^{K}y_{k}^{(i)}\log h_{\theta}(x^{(i)})_{k}+(1-y_{k}^{(i)})\log (1-h_\theta(x^{(i)})_k)] + \frac{\lambda}{2m}\sum\limits_{l=1}^{L-1}\sum\limits_{i=1}^{s_l}\sum\limits_{j=1}^{s_l+1}(\theta_{ji}^{(l)})^2$</li>
 </ul>
 <p>后向传播</p>
 <p>$\delta^{(l)}_j$ 代表第l层第j个结点的误差</p>
 <p>$\delta^{(4)}_j=a^{(4)}_j-y_j$</p>
 <p>$\delta^{(3)}=(\Theta^{(3)})^T\delta^{(4)}.*g^{‘}(z^{(3)})$</p>
 <p>$\delta^{(2)}=(\Theta^{(2)})^T\delta^{(3)}.*g^{‘}(z^{(2)})$</p>
-<p>$\Delta^{(l)}<em>{ij}:=\Delta^{(l)}</em>{ij}+a^{(l)}_j\delta^{l+1}_i$</p>
-<p>$D^{(l)}<em>{ij}:=\frac{1}{m}\Delta；ta^{(l)}</em>{ij}+\lambda\Theta^{(l)}_{ij}$ if $j\ne0$</p>
-<p>$D^{(l)}<em>{ij}:=\frac{1}{m}\Delta^{(l)}</em>{ij}$ if $j=0$</p>
+<p>$\Delta^{(l)}_{ij}:=\Delta^{(l)}_{ij}+a^{(l)}_j\delta^{l+1}_i$</p>
+<p>$D^{(l)}_{ij}:=\frac{1}{m}\Delta；ta^{(l)}_{ij}+\lambda\Theta^{(l)}_{ij}$ if $j\ne0$</p>
+<p>$D^{(l)}_{ij}:=\frac{1}{m}\Delta^{(l)}_{ij}$ if $j=0$</p>
 <p>D就是J对$\Theta$的偏导</p>
 <p>梯度检测</p>
 <ul>
@@ -430,7 +430,7 @@
 </ul>
 <h4 id="机器学习数据"><a href="#机器学习数据" class="headerlink" title="机器学习数据"></a>机器学习数据</h4><p>多特征的模型保证低偏差</p>
 <p>大量数据保证低方差</p>
-<h4 id="支持向量机"><a href="#支持向量机" class="headerlink" title="支持向量机"></a>支持向量机</h4><p>优化目标：$min<em>\theta C\sum\limits</em>{i=1}^{m}[y^{(i)}cost<em>1(\theta^{T}x^{(i)})+(1-y)cost_0(\theta^{T}x^{(i)})]+\frac{1}{2}\sum\limits</em>{i=1}^{n}\theta_j^2$ </p>
+<h4 id="支持向量机"><a href="#支持向量机" class="headerlink" title="支持向量机"></a>支持向量机</h4><p>优化目标：$min_\theta C\sum\limits_{i=1}^{m}[y^{(i)}cost_1(\theta^{T}x^{(i)})+(1-y)cost_0(\theta^{T}x^{(i)})]+\frac{1}{2}\sum\limits_{i=1}^{n}\theta_j^2$ </p>
 <p>支持向量机间隔的数学原理</p>
 <ul>
 <li>向量内积：$u^Tv=P\cdot||u|| $ ，P是向量v在向量u上的投影</li>
@@ -445,9 +445,9 @@
 </li>
 <li><p>标记点l：训练样本</p>
 </li>
-<li><p>相似度函数： $f<em>i = similarity(x,l^{(i)}) = exp(-\frac{||x-l^{(i)}||^2}{2\sigma^2}) = exp(-\frac{\sum\limits</em>{j=1}^{n}(x_j-l_j^{(i)})^2}{2\sigma^2})$，x与l接近，f约等于1，x与l不接近，f约等于0</p>
+<li><p>相似度函数： $f_i = similarity(x,l^{(i)}) = exp(-\frac{||x-l^{(i)}||^2}{2\sigma^2}) = exp(-\frac{\sum\limits_{j=1}^{n}(x_j-l_j^{(i)})^2}{2\sigma^2})$，x与l接近，f约等于1，x与l不接近，f约等于0</p>
 </li>
-<li><p>优化目标：$min<em>\theta C\sum\limits</em>{i=1}^{m}[y^{(i)}cost<em>1(\theta^{T}y^{(i)})+(1-y)cost_0(\theta^{T}y^{(i)})]+\frac{1}{2}\sum\limits</em>{i=1}^{n}\theta_j^2$ </p>
+<li><p>优化目标：$min_\theta C\sum\limits_{i=1}^{m}[y^{(i)}cost_1(\theta^{T}y^{(i)})+(1-y)cost_0(\theta^{T}y^{(i)})]+\frac{1}{2}\sum\limits_{i=1}^{n}\theta_j^2$ </p>
 </li>
 <li><p>核函数必须满足默塞尔定理以便能够使用大类优化</p>
 </li>
@@ -488,7 +488,7 @@
 </li>
 <li><p>$c^{(i)}$：簇的下标，$\mu_{c^{(i)}}$：簇的聚类中心</p>
 </li>
-<li>代价函数：$J(c^{(1)},…c^{(m)},\mu<em>1,…\mu_K)=\frac{1}{m}\sum\limits</em>{i=1}^{m}||x^{(i)}-\mu_{c^{(i)}}||^2$</li>
+<li>代价函数：$J(c^{(1)},…c^{(m)},\mu_1,…\mu_K)=\frac{1}{m}\sum\limits_{i=1}^{m}||x^{(i)}-\mu_{c^{(i)}}||^2$</li>
 <li>优化目标：$\min J(c^{(1)},…c^{(m)},\mu_1,…\mu_K)$</li>
 </ul>
 <p>随机初始化</p>
@@ -506,13 +506,13 @@
 <p>主成分分析PCA</p>
 <ul>
 <li>线性回归是最小化竖直距离，主成分分析是最小化垂直距离</li>
-<li>均值标准化：$\mu<em>j=\frac{1}{m}\sum\limits</em>{i=1}^{m}x^{(i)}_j$，$x_j^{(i)}=x_j-\mu_j$</li>
+<li>均值标准化：$\mu_j=\frac{1}{m}\sum\limits_{i=1}^{m}x^{(i)}_j$，$x_j^{(i)}=x_j-\mu_j$</li>
 <li>特征缩放：$x_j^{(i)} = \frac{x_j^{(i)}-\mu_j}{s_j}$</li>
 <li>协方差矩阵：$\Sigma = \frac{1}{m}\sum_{i=1}^{n}(x^{(i)})(x^{(i)})^T$</li>
 <li>$[U, S, V]=svd(\Sigma)$，提取U的前k个列向量实现降维，得到新的特征z </li>
-<li>$z = U<em>{reduce}^Tx$，$x</em>{approx}=U<em>{reduce}z$，$U</em>{reduce}$是n*k的矩阵</li>
-<li>主成分的数量：$\frac{\frac{1}{m}\sum\limits<em>{i=1}^{m}||x^{(i)}-x</em>{approx}^{(i)}||^2}{\frac{1}{m}\sum\limits_{i=1}^{m}||x^{(i)}||^2} \le 0.01$，选择最小的k使得方差保留99%</li>
-<li>上式可由S计算：$1-\frac{\sum\limits<em>{i=1}^{k}S</em>{ii}}{\sum\limits<em>{i=1}^{n}S</em>{ii}} \le 0.01$</li>
+<li>$z = U_{reduce}^Tx$，$x_{approx}=U_{reduce}z$，$U_{reduce}$是n*k的矩阵</li>
+<li>主成分的数量：$\frac{\frac{1}{m}\sum\limits_{i=1}^{m}||x^{(i)}-x_{approx}^{(i)}||^2}{\frac{1}{m}\sum\limits_{i=1}^{m}||x^{(i)}||^2} \le 0.01$，选择最小的k使得方差保留99%</li>
+<li>上式可由S计算：$1-\frac{\sum\limits_{i=1}^{k}S_{ii}}{\sum\limits_{i=1}^{n}S_{ii}} \le 0.01$</li>
 </ul>
 <p>应用PCA</p>
 <ul>
@@ -526,7 +526,7 @@
 <li><p>不建议使用PCA防止过拟合，因为会丢失信息，建议使用正则化，正则化不会丢失信息</p>
 </li>
 </ul>
-<h4 id="异常检测"><a href="#异常检测" class="headerlink" title="异常检测"></a>异常检测</h4><p>给定数据集${x^{(1)},…,x^{(m)}}$，判断$x<em>{test}$是否异常，$x</em>{test}$出现的概率$p(x_{test}) &lt; flag$则异常 </p>
+<h4 id="异常检测"><a href="#异常检测" class="headerlink" title="异常检测"></a>异常检测</h4><p>给定数据集${x^{(1)},…,x^{(m)}}$，判断$x_{test}$是否异常，$x_{test}$出现的概率$p(x_{test}) &lt; flag$则异常 </p>
 <p>高斯分布</p>
 <ul>
 <li>$x$~$\chi(\mu, \sigma^2)$</li>
@@ -552,7 +552,7 @@
 <ul>
 <li><p>$p(x;\mu,\Sigma)=\frac{1}{\sqrt{2\pi}\sqrt{|\Sigma|}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))$</p>
 </li>
-<li><p>$\mu=\frac{1}{m}\sum\limits<em>{i=1}^{m}x^{(i)} $，$\Sigma = \frac{1}{m}\sum</em>{i=1}^{n}(x^{(i)}-\mu)(x^{(i)}-\mu)^T$，需要保证$m &gt; n$</p>
+<li><p>$\mu=\frac{1}{m}\sum\limits_{i=1}^{m}x^{(i)} $，$\Sigma = \frac{1}{m}\sum_{i=1}^{n}(x^{(i)}-\mu)(x^{(i)}-\mu)^T$，需要保证$m &gt; n$</p>
 </li>
 <li>$p(x) &lt; \epsilon$ 时异常</li>
 <li>计算代价高</li>
@@ -561,16 +561,16 @@
 <ul>
 <li>$n_u$：用户数量，$n_m$：电影数量</li>
 <li>对每个用户使用线性回归</li>
-<li>给定$x^{(i)}$，学习$\theta^{(1)},…\theta^{(n<em>u)}$：$min</em>{\theta^{(1)},…,\theta^{(n<em>u)}}\frac{1}{2}\sum\limits</em>{j=1}^{n<em>u}\sum\limits</em>{i:r(i,j)=1}((\theta^{(j)})^T-y^{(i,j)})^2+\frac{\lambda}{2}\sum\limits<em>{j=1}^{n_u}\sum\limits</em>{k=1}^{n}(\theta_k^{(j)})^2$</li>
+<li>给定$x^{(i)}$，学习$\theta^{(1)},…\theta^{(n_u)}$：$min_{\theta^{(1)},…,\theta^{(n_u)}}\frac{1}{2}\sum\limits_{j=1}^{n_u}\sum\limits_{i:r(i,j)=1}((\theta^{(j)})^T-y^{(i,j)})^2+\frac{\lambda}{2}\sum\limits_{j=1}^{n_u}\sum\limits_{k=1}^{n}(\theta_k^{(j)})^2$</li>
 </ul>
 <p>协同过滤</p>
 <ul>
-<li>给定$\theta^{(1)},…\theta^{(n<em>u)}$，学习$x^{(i)}$：$min</em>{x^{(1)},…,x^{(n<em>m)}}\frac{1}{2}\sum\limits</em>{i=1}^{n<em>m}\sum\limits</em>{j:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})^2+\frac{\lambda}{2}\sum\limits<em>{i=1}^{n_m}\sum\limits</em>{k=1}^{n}(x^{(i)}_k)^2$</li>
+<li>给定$\theta^{(1)},…\theta^{(n_u)}$，学习$x^{(i)}$：$min_{x^{(1)},…,x^{(n_m)}}\frac{1}{2}\sum\limits_{i=1}^{n_m}\sum\limits_{j:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})^2+\frac{\lambda}{2}\sum\limits_{i=1}^{n_m}\sum\limits_{k=1}^{n}(x^{(i)}_k)^2$</li>
 <li>随机初始化$\theta$，学习$x$，再学习$\theta$，…，直至收敛</li>
 </ul>
 <p>可以同时计算$x$和$\theta$</p>
 <ul>
-<li><p>$J(x^{(1)},…,x^{(n<em>m)},\theta^{(1)},…,\theta^{(n_u})=\frac{1}{2}\sum\limits</em>{(i,j):r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})^2+\frac{\lambda}{2}\sum\limits<em>{j=1}^{n_u}\sum\limits</em>{k=1}^{n}(\theta<em>k^{(j)})^2+\frac{\lambda}{2}\sum\limits</em>{i=1}^{n<em>m}\sum\limits</em>{k=1}^{n}(x^{(i)}_k)^2$</p>
+<li><p>$J(x^{(1)},…,x^{(n_m)},\theta^{(1)},…,\theta^{(n_u})=\frac{1}{2}\sum\limits_{(i,j):r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})^2+\frac{\lambda}{2}\sum\limits_{j=1}^{n_u}\sum\limits_{k=1}^{n}(\theta_k^{(j)})^2+\frac{\lambda}{2}\sum\limits_{i=1}^{n_m}\sum\limits_{k=1}^{n}(x^{(i)}_k)^2$</p>
 </li>
 <li><p>$\min J$</p>
 </li>
@@ -603,7 +603,7 @@
 <p>b = 10, m = 1000</p>
 <p>Repeat{</p>
 <p>​    for i = 1, 11, 21, …, 991 {</p>
-<p>​        $\theta<em>j := \theta_j - \alpha\frac{1}{10}\sum\limits</em>{k=i}^{i+9}(h_{\theta}(x^{(k)})-y^{(k)})x^{(k)}_j$ </p>
+<p>​        $\theta_j := \theta_j - \alpha\frac{1}{10}\sum\limits_{k=i}^{i+9}(h_{\theta}(x^{(k)})-y^{(k)})x^{(k)}_j$ </p>
 <p>​        (for every j = 0, …, n )</p>
 <p>​    }</p>
 <p>}</p>
@@ -619,7 +619,7 @@
 </ul>
 <p>MapReduce</p>
 <ul>
-<li>批量梯度下降：$\theta<em>j := \theta_j - \alpha\frac{1}{400}\sum\limits</em>{i=1}^{400}(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)}_j$</li>
+<li>批量梯度下降：$\theta_j := \theta_j - \alpha\frac{1}{400}\sum\limits_{i=1}^{400}(h_{\theta}(x^{(i)})-y^{(i)})x^{(i)}_j$</li>
 <li>机器1使用前100的样本，对前100个样本求和temp1</li>
 <li>机器2使用101-200的样本，求和temp2</li>
 <li>机器3使用201-300的样本，求和temp3</li>
